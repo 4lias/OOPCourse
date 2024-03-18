@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/alias/Documents/GitHub/ObjectProgrammingCollege/zadanie1",
-      "program": "/home/alias/Documents/GitHub/ObjectProgrammingCollege/zadanie1/build/Debug/outDebug",
+      "cwd": "/home/alias/Documents/GitHub/ObjectProgrammingCollege/project_example",
+      "program": "/home/alias/Documents/GitHub/ObjectProgrammingCollege/project_example/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
