@@ -1,4 +1,6 @@
-class gameModel
+#pragma once
+
+class GameModel
 {
 
 };
