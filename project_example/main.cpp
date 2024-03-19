@@ -8,11 +8,22 @@ using namespace std;
 
 class View {
     public:
-        void printStartHeader(){}
+        void printStartHeader()
+        {
+            cout << "Witamy w B clickerze!\n Wciśnij 'b' by dodać punkt lub 'e' by wyjść" << endl;
+        }
 
-        void printData(int points){}
+        void printData(int points)
+        {
+            cout << points << "points" << endl;
+        }
 
-        char getUserInput(){}
+        char getUserInput()
+        {
+            char input;
+            cin >> input;
+            return input;
+        }
 };
 
 class Model {
