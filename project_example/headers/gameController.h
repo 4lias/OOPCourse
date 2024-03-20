@@ -1,4 +1,4 @@
-//#pragma once
+#pragma once
 
 //#include "gameModel.h"
 //#include "gameView.h"

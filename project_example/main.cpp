@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "view/gameView.h"
-//#include "model/gameModel.h"
-//#include "controller/gameController.h"
+#include "headers/gameView.h"
+#include "headers/gameModel.h"
+//#include "headers/gameController.h"
 
 using namespace std;
 
@@ -26,8 +26,7 @@ using namespace std;
         }
 };
 */
-
-class GameModel {
+/*class GameModel {
     public:
         void addPoint()
         {
@@ -42,8 +41,7 @@ class GameModel {
     private:
         int points=0;
 };
-
-
+*/
 class GameController {
 
     private:
@@ -85,7 +83,6 @@ class GameController {
         }
 
 };
-
 
 int main()
 {

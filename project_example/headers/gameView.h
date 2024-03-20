@@ -1,5 +1,5 @@
 #pragma once
-//#pragma once
+#pragma once
 
 class GameView{
     public:

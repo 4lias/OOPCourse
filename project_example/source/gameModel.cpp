@@ -1,4 +1,4 @@
-#include "headers/gameModel.h"
+#include "../headers/gameModel.h"
 
 void GameModel::addPoint()
 {
