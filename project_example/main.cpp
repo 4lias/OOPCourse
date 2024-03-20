@@ -10,12 +10,12 @@ class View {
     public:
         void printStartHeader()
         {
-            cout << "Witamy w B clickerze!\n Wciśnij 'b' by dodać punkt lub 'e' by wyjść" << endl;
+            cout << "Witamy w B clickerze!\nWciśnij 'b' by dodać punkt lub 'e' by wyjść" << endl;
         }
 
         void printData(int points)
         {
-            cout << points << "points" << endl;
+            cout <<"Points: " <<  points << endl;
         }
 
         char getUserInput()
@@ -28,12 +28,18 @@ class View {
 
 class Model {
     public:
-        void addPoint(){}
+        void addPoint()
+        {
+            points++;
+        }
 
-        int getPoints() const {}
+        int getPoints() const 
+        {
+            return points;
+        }
 
     private:
-        int points;
+        int points=0;
 };
 
 class Controller {
@@ -45,12 +51,48 @@ class Controller {
     public:
         Controller(Model& model, View& view){}
 
-        void launch(){}
+        void launch()
+        {
+            int points = 0;
+
+            char inputValues[] = {'b', 'e'};
+            view.printStartHeader();
+            view.printData(points);
+            
+            while (true)
+            {
+                char input  = view.getUserInput();
+                
+                if(input == inputValues[0])
+                {
+                    cout << input;
+                    model.addPoint();
+                    points = model.getPoints();
+                    view.printData(points);
+                }
+                else if(input == inputValues[1])
+                {
+                    break;
+                }
+                else
+                {
+                    cout << "Error" << endl;
+                }
+            }
+
+            cout << "Wychodzenie..." << endl;
+        }
 
 };
 
 
 int main()
 {
+    View view;
+    Model model;
+    Controller control(model, view);
+    
+    control.launch();
+
     return 0;
 }
