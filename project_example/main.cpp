@@ -1,12 +1,12 @@
 #include <iostream>
-/*
-#include "headers/gameView.h"
-#include "headers/gameController.h"
-#include "headers/gameModel.h"
-*/
+
+#include "gameView.h"
+//#include "headers/gameModel.h"
+//#include "headers/gameController.h"
+
 using namespace std;
 
-class View {
+/*class GameView {
     public:
         void printStartHeader()
         {
@@ -25,8 +25,9 @@ class View {
             return input;
         }
 };
+*/
 
-class Model {
+class GameModel {
     public:
         void addPoint()
         {
@@ -42,14 +43,15 @@ class Model {
         int points=0;
 };
 
-class Controller {
+
+class GameController {
 
     private:
-        Model model;
-        View view;
+        GameModel model;
+        GameView view;
 
     public:
-        Controller(Model& model, View& view){}
+        GameController(GameModel& model, GameView& view){}
 
         void launch()
         {
@@ -65,7 +67,6 @@ class Controller {
                 
                 if(input == inputValues[0])
                 {
-                    cout << input;
                     model.addPoint();
                     points = model.getPoints();
                     view.printData(points);
@@ -88,9 +89,9 @@ class Controller {
 
 int main()
 {
-    View view;
-    Model model;
-    Controller control(model, view);
+    GameView view;
+    GameModel model;
+    GameController control(model, view);
     
     control.launch();
 

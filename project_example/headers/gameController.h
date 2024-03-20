@@ -1,6 +1,16 @@
-#pragma once
+//#pragma once
 
-class gameController
+//#include "gameModel.h"
+//#include "gameView.h"
+
+class GameController
 {
+    private:
+        GameModel model;
+        GameView view;
 
+    public:
+        GameController(GameModel& model, GameView& view);
+
+        void launch();
 };
