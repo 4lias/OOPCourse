@@ -8,5 +8,5 @@ class GameView{
 
         char getUserInput();
 
-        //std::string romanNumerals(int level);
+        std::string romanNumerals(int level);
 };
