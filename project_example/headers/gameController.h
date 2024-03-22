@@ -1,7 +1,5 @@
-#pragma once
-
-//#include "gameModel.h"
-//#include "gameView.h"
+#include "../headers/gameView.h"
+#include "../headers/gameModel.h"
 
 class GameController
 {
@@ -13,4 +11,6 @@ class GameController
         GameController(GameModel& model, GameView& view);
 
         void launch();
+
+        void levelUp();
 };

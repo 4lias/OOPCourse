@@ -4,23 +4,32 @@
 
 #include <iostream>
 
+GameController::GameController(GameModel& model, GameView& view){}
+
+void GameController::levelUp()
+{
+    if(model.getPoints()%5==0 && model.getPoints()!=0)
+    {
+        model.addLevel();
+    }
+}
+
 void GameController::launch()
 {
-    int points = 0;
     char inputValues[] = {'b', 'e'};
     view.printStartHeader();
-    view.printData(points);
+    view.printData(model.getPoints(), model.getLevel());
 
     while (true)
     {
         char input  = view.getUserInput();
 
+        levelUp();
         if(input == inputValues[0])
         {
-            std::cout << input;
             model.addPoint();
-            points = model.getPoints();
-            view.printData(points);
+            view.printData(model.getPoints(), model.getLevel());
+            
         }
         else if(input == inputValues[1])
         {
@@ -30,6 +39,7 @@ void GameController::launch()
         {
             std::cout << "Error" << std::endl;
         }
+
     }
 
     std::cout << "Wychodzenie..." << std::endl;
