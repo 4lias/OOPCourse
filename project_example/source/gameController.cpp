@@ -27,9 +27,8 @@ void GameController::launch()
         levelUp();
         if(input == inputValues[0])
         {
-            model.addPoint();
             view.printData(model.getPoints(), model.getLevel());
-            
+            model.addPoint();            
         }
         else if(input == inputValues[1])
         {
