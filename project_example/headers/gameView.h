@@ -6,9 +6,7 @@ class GameView{
     public:
         void printStartHeader();
 
-        void printData(int points, int level);
+        void printData(int points, std::string level);
 
         char getUserInput();
-
-        std::string romanNumerals(int level);
 };

@@ -3,14 +3,15 @@
 
 class GameController
 {
-    private:
-        GameModel model;
-        GameView view;
-
     public:
         GameController(GameModel& model, GameView& view);
 
         void launch();
 
         void levelUp();
+
+    private:
+        GameModel model;
+        GameView view;
+
 };

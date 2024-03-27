@@ -16,23 +16,27 @@ void GameController::levelUp()
 
 void GameController::launch()
 {
-    char inputValues[] = {'b', 'e'};
+    char inputValues[] = {'b', 'e', 'l'};
     view.printStartHeader();
-    view.printData(model.getPoints(), model.getLevel());
+    view.printData(model.getPoints(), model.romanNumerals( model.getLevel()));
 
     while (true)
     {
         char input  = view.getUserInput();
 
-        levelUp();
         if(input == inputValues[0])
         {
-            view.printData(model.getPoints(), model.getLevel());
-            model.addPoint();            
+            model.addPoint();
+            levelUp();
+            view.printData(model.getPoints(), model.romanNumerals(model.getLevel()));
         }
         else if(input == inputValues[1])
         {
             break;
+        }
+        else if(input == inputValues[2])
+        {
+            model.load();
         }
         else
         {
@@ -42,4 +46,5 @@ void GameController::launch()
     }
 
     std::cout << "Wychodzenie..." << std::endl;
+    model.save(model.getLevel(), model.getPoints());
 }
