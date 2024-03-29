@@ -1,5 +1,5 @@
-#include "../headers/gameView.h"
-#include "../headers/gameModel.h"
+#include "../view/gameView.h"
+#include "../model/gameModel.h"
 
 class GameController
 {

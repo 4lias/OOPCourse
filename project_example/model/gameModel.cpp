@@ -1,10 +1,10 @@
-#include "../headers/gameModel.h"
+#include "gameModel.h"
 #include <cmath>
 #include <string>
 #include <fstream>
 //#include <iostream>
 
-//GameModel::GameModel(int points=0, int level=0){};
+GameModel::GameModel() :  level(0), points(0) {}
 
 void GameModel::addPoint(){
     points++;

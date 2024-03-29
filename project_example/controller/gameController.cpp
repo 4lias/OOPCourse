@@ -1,6 +1,6 @@
-#include "../headers/gameController.h"
-#include "../headers/gameView.h"
-#include "../headers/gameModel.h"
+#include "gameController.h"
+#include "../view/gameView.h"
+#include "../model/gameModel.h"
 
 #include <iostream>
 

@@ -1,6 +1,6 @@
-#include "headers/gameView.h"
-#include "headers/gameModel.h"
-#include "headers/gameController.h"
+#include "view/gameView.h"
+#include "model/gameModel.h"
+#include "controller/gameController.h"
 
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include "../headers/gameView.h"
+#include "gameView.h"
 #include <iostream>
 #include <string>
 #include <cmath>
@@ -7,7 +7,6 @@ void GameView::printStartHeader()
 {
         std::cout << "Witamy w B clickerze!\nWciśnij 'b' by dodać punkt lub 'e' by wyjść" << std::endl;
 }
-
 
 void GameView::printData(int points, std::string level)
 {

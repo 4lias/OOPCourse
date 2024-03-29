@@ -4,7 +4,8 @@
 class GameModel
 {
     public:
-        //GameModel(int points, int level);
+        GameModel();
+        
         void addPoint();
         void addLevel();
 
@@ -17,6 +18,6 @@ class GameModel
         void load();
 
     private:
-        int points=0;
-        int level=0;
+        int points;
+        int level;
 };
