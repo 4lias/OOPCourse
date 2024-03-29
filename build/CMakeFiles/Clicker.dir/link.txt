@@ -1,0 +1,1 @@
+/usr/bin/g++ -g CMakeFiles/Clicker.dir/main.cpp.o CMakeFiles/Clicker.dir/controller/gameController.cpp.o CMakeFiles/Clicker.dir/view/gameView.cpp.o CMakeFiles/Clicker.dir/model/gameModel.cpp.o -o Clicker 
