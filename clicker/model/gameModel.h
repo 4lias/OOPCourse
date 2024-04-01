@@ -13,9 +13,9 @@ class GameModel
         int getLevel() const;
 
         std::string romanNumerals(int level);
+        
         void save(int level, int points);
-
-        void load();
+        bool load();
 
     private:
         int points;

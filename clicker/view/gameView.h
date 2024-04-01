@@ -8,5 +8,10 @@ class GameView{
 
         void printData(int points, std::string level);
 
+        void askForSave();
+        void askForLoad();
+
+        void printErrorMessage(char errorType);
+
         char getUserInput();
 };

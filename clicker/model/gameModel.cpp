@@ -83,17 +83,23 @@ void GameModel::save(int level, int points)
     save.close();
 }
 
-void GameModel::load()
+bool GameModel::load()
 {
     std::string readPoints="0", readLevel="0";
 
     std::ifstream load;
     load.open("save.txt");
-
+    if(load.is_open()==false)
+    {
+        return false;
+    }
+    
     load >> readLevel >> readPoints;
 
     level = stoi(readLevel);
     points = stoi(readPoints);
 
+    
     load.close();
+    return true;
 }
