@@ -47,7 +47,7 @@ void GameController::launch()
         }
         else
         {
-            std::cout << "Error" << std::endl;
+            view.printErrorMessage('b');
         }
     }
 

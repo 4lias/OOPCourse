@@ -32,10 +32,12 @@ void GameView::printErrorMessage(char errorType)
                 case 'b':
                 {
                         std::cout << "Błędny klawisz" << std::endl;
+                        break;
                 }
                 default:
                 {
                         std::cout << "Błąd" << std::endl;
+                        break;
                 }
         }
 }
